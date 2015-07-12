@@ -1,0 +1,32 @@
+Pebble.addEventListener('ready',
+  function(e) {
+    console.log('JavaScript app ready and running!');
+  }
+);
+
+Pebble.addEventListener('showConfiguration', function(e) {
+  // Show config page
+  Pebble.openURL('http://jinalex.github.io/synesthesia.html');
+});
+
+Pebble.addEventListener('webviewclosed',
+  function(e) {
+    var configuration = JSON.parse(decodeURIComponent(e.response)).toString();
+    console.log('Configuration window returned: ', configuration);//
+    
+    // Assemble dictionary
+    var dictionary = {
+      "KEY_COLORS": configuration
+    };
+    
+    Pebble.sendAppMessage(dictionary,
+      function(e) {
+        console.log("Configuration info sent to Pebble successfully!");
+      },
+      function(e) {
+        console.log("Error sending configuration info to Pebble.");
+      }                
+    );
+  }
+);
+

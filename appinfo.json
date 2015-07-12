@@ -1,0 +1,24 @@
+{
+    "appKeys": {
+        "KEY_COLORS": 0
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "companyName": "Alex Jin",
+    "longName": "Synesthesia",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "Synesthesia",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "4083d68e-4ab2-4a43-9a00-f56ccb148bc8",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
